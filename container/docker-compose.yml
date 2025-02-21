@@ -1,0 +1,12 @@
+services:
+  nginx:
+    image: nginx:latest
+    container_name: web_server
+    ports:
+      - "8080:80"
+    networks:
+      - sharenetwork
+
+networks:
+  sharenetwork:
+    driver: bridge
